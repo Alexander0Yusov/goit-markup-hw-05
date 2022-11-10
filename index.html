@@ -16,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/modal.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -64,7 +65,17 @@
           Ефективні рішення для <br />
           вашого бізнесу
         </h1>
-        <button class="btn" type="button">Замовити послугу</button>
+        <button class="btn" type="button" data-modal-open>Замовити послугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button type="button" data-modal-close>
+              <!-- <img src="./images/close.svg" alt="" /> -->
+              <svg class="close-icon">
+                <use href="./images/close.svg#close-icon"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
 
       <section class="features section">
@@ -124,13 +135,28 @@
           <h2 class="title">Чим ми займаємося</h2>
           <ul class="specialization-list">
             <li class="specialization-item">
-              <img width="370" src="./images/mission-1.jpg" alt="десктопна розробка" />
+              <div class="specialization-thumb">
+                <img width="370" src="./images/mission-1.jpg" alt="десктопна розробка" />
+                <div class="specialization-overlay">
+                  <p>Десктопні додатки</p>
+                </div>
+              </div>
             </li>
             <li class="specialization-item">
-              <img width="370" src="./images/mission-2.jpg" alt="мобільна розробка" />
+              <div class="specialization-thumb">
+                <img width="370" src="./images/mission-2.jpg" alt="мобільна розробка" />
+                <div class="specialization-overlay">
+                  <p>Мобільні додатки</p>
+                </div>
+              </div>
             </li>
             <li class="specialization-item">
-              <img width="370" src="./images/mission-3.jpg" alt="розробка дизайну" />
+              <div class="specialization-thumb">
+                <img width="370" src="./images/mission-3.jpg" alt="розробка дизайну" />
+                <div class="specialization-overlay">
+                  <p>Дизайнерські рішення</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
