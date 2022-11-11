@@ -452,7 +452,7 @@ img{
 .team .socials-item .link {
    fill: var(--gray-icon);
 
-   transition-property: fill background-color;
+   transition-property: fill, background-color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
